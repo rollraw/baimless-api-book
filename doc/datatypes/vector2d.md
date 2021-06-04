@@ -1,11 +1,26 @@
-# Vector2D class
+# vector2d
 
 ## Variables
 
-  
- \| Name \| Type \| \| :--- \| :---- \| \| x \| float \| \| y \| float \|
+| Name | Type |
+| :--- | :--- |
+| x | float |
+| y | float |
 
 ## Functions
 
- \#\#\# IsZero Returns: \| Type \| Description \| \| :--- \| :--------------------------------- \| \| bool \| true if all vector axes equals zero \| Code: \`\`\`lua local vecZero = Vector2D.new\(0.0, 0.0\) local bIsZero = vecZero.IsZero\(\) \`\`\`
+### IsZero
+
+Returns:
+
+| Type | Description |
+| :--- | :--- |
+| bool | true if all vector axes equals zero |
+
+Code:
+
+```text
+local vecZero = Vector2D.new(0.0, 0.0)
+local bIsZero = vecZero.IsZero()
+```
 
