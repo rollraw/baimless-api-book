@@ -28,43 +28,43 @@ Supported LuaJIT [extensions](https://luajit.org/extensions.html):
 
 Description: tables of main i/o cheat parts
 
-* [Client](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/client.md)
-* [Config](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/config.md)
-* [Menu](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/menu.md)
-* [Draw](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/draw.md)
-* [HTTP](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/http.md)
+* [Client](doc/core/client.md)
+* [Config](doc/core/config.md)
+* [Menu](doc/core/menu.md)
+* [Draw](doc/core/draw.md)
+* [HTTP](doc/core/http.md)
 
 #### 📢 Interfaces
 
 Description: tables of source-SDK abstract classes to work with game
 
-* [IClientState](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/iclientstate.md)
-* [IConVar](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/iconvar.md)
-* [IEngine](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/iengine.md)
-* [IEntityList](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/ientitylist.md)
-* [IGlobals](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/iglobals.md)
+* [IClientState](doc/interfaces/iclientstate.md)
+* [IConVar](doc/interfaces/iconvar.md)
+* [IEngine](doc/interfaces/iengine.md)
+* [IEntityList](doc/interfaces/ientitylist.md)
+* [IGlobals](doc/interfaces/iglobals.md)
 
 #### 📦 Data Types
 
 Description: classes to work with game or cheat functions/variables
 
-* [Color](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/color.md)
-* [Vector2D](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/vector2d.md)
-* [Vector](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/vector.md)
-* [QAngle](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/qangle.md)
+* [Color](doc/datatypes/color.md)
+* [Vector2D](doc/datatypes/vector2d.md)
+* [Vector](doc/datatypes/vector.md)
+* [QAngle](doc/datatypes/qangle.md)
 
 #### 🔗 Classes
 
 Description: classes to get/set values from/to the game
 
-* [IGameEvent](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/igameevent.md)
-* [INetChannelInfo](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/inetchannelinfo.md)
-* [IClientEntity](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/icliententity.md)
-* [CBaseEntity](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/cbaseentity.md)
-* [CBaseCombatWeapon](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/cbasecombatweapon.md)
-* [CUserCmd](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/cusercmd.md)
-* [CConVar](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/cconvar.md)
-* [PlayerInfo\_t](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/playerinfo_t.md)
+* [IGameEvent](doc/classes/igameevent.md)
+* [INetChannelInfo](doc/classes/inetchannelinfo.md)
+* [IClientEntity](doc/classes/icliententity.md)
+* [CBaseEntity](doc/classes/cbaseentity.md)
+* [CBaseCombatWeapon](doc/classes/cbasecombatweapon.md)
+* [CUserCmd](doc/classes/cusercmd.md)
+* [CConVar](doc/classes/cconvar.md)
+* [PlayerInfo\_t](doc/classes/playerinfo_t.md)
 
 ## 🧬 Remarks
 
