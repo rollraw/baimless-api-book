@@ -77,5 +77,5 @@ Description: classes to get/set values from/to the game
 
 _Found a mistake in documentation? Looking for a better explanation or API enhancement?_
 
-Feel free to open [issue](https://github.com/rollraw/baimless-lua-api/issues) or [pull request](https://github.com/rollraw/baimless-lua-api/pulls)
+Feel free to open [issue](https://github.com/rollraw/baimless-api-book/issues) or [pull request](https://github.com/rollraw/baimless-api-book/pulls)
 
