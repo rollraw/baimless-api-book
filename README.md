@@ -24,7 +24,9 @@ Supported LuaJIT [extensions](https://luajit.org/extensions.html):
 
 ## 🗺️ Navigation
 
-#### 💡 Core     Description: tables of main i/o cheat parts
+#### 💡 Core
+
+Description: tables of main i/o cheat parts
 
 * [Client](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/client.md)
 * [Config](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/config.md)
@@ -32,7 +34,9 @@ Supported LuaJIT [extensions](https://luajit.org/extensions.html):
 * [Draw](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/draw.md)
 * [HTTP](https://github.com/rollraw/baimless-lua-api/blob/master/doc/core/http.md)
 
-#### 📢 Interfaces     Description: tables of source-SDK abstract classes to work with game
+#### 📢 Interfaces
+
+Description: tables of source-SDK abstract classes to work with game
 
 * [IClientState](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/iclientstate.md)
 * [IConVar](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/iconvar.md)
@@ -40,14 +44,18 @@ Supported LuaJIT [extensions](https://luajit.org/extensions.html):
 * [IEntityList](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/ientitylist.md)
 * [IGlobals](https://github.com/rollraw/baimless-lua-api/blob/master/doc/interfaces/iglobals.md)
 
-#### 📦 Data Types     Description: classes to work with game or cheat functions/variables
+#### 📦 Data Types
+
+Description: classes to work with game or cheat functions/variables
 
 * [Color](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/color.md)
 * [Vector2D](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/vector2d.md)
 * [Vector](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/vector.md)
 * [QAngle](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/qangle.md)
 
-#### 🔗 Classes      Description: classes to get/set values from/to the game
+#### 🔗 Classes
+
+Description: classes to get/set values from/to the game
 
 * [IGameEvent](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/igameevent.md)
 * [INetChannelInfo](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/inetchannelinfo.md)
