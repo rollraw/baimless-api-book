@@ -13,7 +13,7 @@
     * [cbasecombatweapon](doc/classes/cbasecombatweapon.md)
     * [igameevent](doc/classes/igameevent.md)
     * [inetchannelinfo](doc/classes/inetchannelinfo.md)
-    * [CBaseEntity : IClientEntity class](doc/classes/cbaseentity.md)
+    * [cbaseentity](doc/classes/cbaseentity.md)
     * [icliententity](doc/classes/icliententity.md)
     * [cusercmd](doc/classes/cusercmd.md)
     * [cconvar](doc/classes/cconvar.md)

@@ -4,10 +4,6 @@ description: Baimless LUA-scripts API documentation
 
 # Overview
 
-[Permalink](https://github.com/rollraw/baimless-lua-api/blob/bc6d51eaff57ab14db11c650f6e0bb502658663c/readme.md)
-
-Cannot retrieve contributors at this time
-
 ## 📚 Information
 
 Backend LUA engine: [**LuaJIT**](https://github.com/LuaJIT/LuaJIT) **v2.1.0**
