@@ -14,11 +14,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| IClientEntity\* | entity pointer of given index |
+| [IClientEntity\*](../classes/icliententity.md) | entity pointer of given index |
 
 Code:
 
-```text
+```lua
 local pLocal = IEntityList.GetClientEntity(IEngine.GetLocalPlayer())
 ```
 
@@ -34,11 +34,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| IClientEntity\* | entity pointer of given handle |
+| [IClientEntity\*](../classes/icliententity.md) | entity pointer of given handle |
 
 Code:
 
-```text
+```lua
 local pLocalWeapon = IEntityList.GetClientEntity(pLocal.GetWeaponHandle())
 ```
 
@@ -52,7 +52,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local nHighestEntityIndex = IEntityList.GetHighestEntityIndex()
 ```
 

@@ -7,7 +7,7 @@
 Description: button states bitflags for `iButtons` variable
 
 | Indentifiers |
-| :---: |
+| :--- |
 | IN\_ATTACK |
 | IN\_JUMP |
 | IN\_DUCK |

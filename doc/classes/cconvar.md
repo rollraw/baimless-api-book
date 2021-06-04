@@ -12,7 +12,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local sv_cheats = IConVar.FindVar("sv_cheats")
 local szName = sv_cheats:GetName()
 print(szName)
@@ -28,7 +28,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local flValue = pSomeCVar:GetFloat()
 ```
 
@@ -42,7 +42,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local iValue = pSomeCVar:GetInt()
 ```
 
@@ -56,7 +56,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bValue = pSomeCVar:GetBool()
 ```
 
@@ -70,7 +70,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local szValue = pSomeCVar:GetString()
 ```
 
@@ -84,6 +84,10 @@ Parameters:
 
 Code:
 
+```lua
+pSomeCVar:SetFloat(1.0)
+```
+
 ### SetInt
 
 Parameters:
@@ -93,6 +97,10 @@ Parameters:
 | iValue | int | value to set |
 
 Code:
+
+```lua
+pSomeCVar:SetInt(1)
+```
 
 ### SetBool
 
@@ -104,6 +112,10 @@ Parameters:
 
 Code:
 
+```lua
+pSomeCVar:SetBool(true)
+```
+
 ### SetString
 
 Parameters:
@@ -114,31 +126,29 @@ Parameters:
 
 Code:
 
+```lua
+pSomeCVar:SetString("1")
+```
+
 ### SetColor
 
 Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| colValue | Color | value to set |
+| colValue | [Color](../datatypes/color.md) | value to set |
 
 Code:
 
-```text
+```lua
 pSomeCVar:SetColor(Color.new(255, 255, 255))
 ```
 
 ### ChangeCallback
 
-Parameters:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| colValue | Color | value to set |
-
 Code:
 
-```text
+```lua
 local cl_fullupdate = IConVar.FindVar("cl_fullupdate")
 
 -- invoke to call change callback, executes a ConCommand or convar callback

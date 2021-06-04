@@ -16,9 +16,9 @@ List:
 | :--- | :--- | :--- |
 | Paint | - | primitives drawing |
 | FrameStageNotify | nStage | called on every frame stage |
-| CreateMoveIn | [CUserCmd](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/cusercmd.md), bSendPacket | createmove inside engine prediction |
-| CreateMovePre | [CUserCmd](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/cusercmd.md), bSendPacket | createmove before engine prediction |
-| CreateMovePost | [CUserCmd](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/cusercmd.md), bSendPacket | createmove post engine prediction |
+| CreateMoveIn | [CUserCmd](../classes/cusercmd.md), bSendPacket | createmove inside engine prediction |
+| CreateMovePre | [CUserCmd](../classes/cusercmd.md), bSendPacket | createmove before engine prediction |
+| CreateMovePost | [CUserCmd](../classes/cusercmd.md), bSendPacket | createmove post engine prediction |
 | Destroy | - | called on current script unload |
 
 Parameters:
@@ -30,7 +30,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 local flRainbow = 0.001
 Client.RegisterCallback("Paint", function()
     if (flRainbow >= 1.0) then
@@ -48,7 +48,7 @@ end)
 
 List: [CS:GO Game Events](https://wiki.alliedmods.net/Counter-Strike:_Global_Offensive_Events)
 
-Arguments: [IGameEvent\*](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/igameevent.md)
+Arguments: [IGameEvent\*](../classes/igameevent.md)
 
 Parameters:
 
@@ -59,7 +59,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 Client.RegisterEventCallback("player_death", function(pEvent)
     local localPlayer = IEngine.GetLocalPlayer()
     local nAttackerID = IEngine.GetPlayerForUserId(pEvent.GetInt("attacker"))
@@ -83,7 +83,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 Client.LoadScript("qo0.lua")
 ```
 
@@ -97,7 +97,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 Client.UnloadScript("qo0.lua")
 ```
 
@@ -118,7 +118,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local ffi = require("ffi")
 local oSetClanTag = ffi.cast('int(__fastcall*)(const char*, const char*)', Client.FindPattern('engine.dll', '53 56 57 8B DA 8B F9 FF 15'))
 
@@ -144,7 +144,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local ffi = require("ffi")
 ffi.cdef[[
 struct IGameConsole
@@ -173,7 +173,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local szUserName = Client.GetCheatUserName()
 print(szUserName)
 ```

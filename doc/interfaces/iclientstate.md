@@ -24,5 +24,5 @@
 | iLastCommandAck | int | last command sequence number acknowledged by server |
 | iCommandAck | int | current command sequence acknowledged by server |
 | iSoundSequence | int | current processed reliable sound sequence number |
-| angViewPoint | QAngle | - |
+| angViewPoint | [QAngle](../datatypes/qangle.md) | - |
 

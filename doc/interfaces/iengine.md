@@ -8,11 +8,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| Vector2D | width and height of game screen |
+| [Vector2D](../datatypes/vector2d.md) | width and height of game screen |
 
 Code:
 
-```text
+```lua
 local vecScreenSize = IEngine.GetScreenSize()
 ```
 
@@ -28,11 +28,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| PlayerInfo\_t | entity player info of given index |
+| [PlayerInfo\_t](../classes/playerinfo_t.md) | entity player info of given index |
 
 Code:
 
-```text
+```lua
 local playerInfo = IEngine.GetPlayerInfo(pLocal:GetIndex())
 ```
 
@@ -52,7 +52,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local nPlayerID = IEngine.GetPlayerForUserID(1)
 ```
 
@@ -66,7 +66,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local nLocalPlayerIndex = IEngine.GetLocalPlayer()
 ```
 
@@ -76,11 +76,11 @@ Return value:
 
 | Type | Description |
 | :--- | :--- |
-| QAngle | local player view angles |
+| [QAngle](../datatypes/qangle.md) | local player view angles |
 
 Code:
 
-```text
+```lua
 local angViewPoint = IEngine.GetViewAngles()
 ```
 
@@ -90,11 +90,11 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| angViewPoint | QAngle | view angles to set for local player |
+| angViewPoint | [QAngle](../datatypes/qangle.md) | view angles to set for local player |
 
 Code:
 
-```text
+```lua
 IEngine.SetViewAngles(QAngle.new(-90.0, 180.0, 0.0))
 ```
 
@@ -108,7 +108,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local nMaxClients = IEngine.GetMaxClients()
 ```
 
@@ -122,7 +122,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsInGame = IEngine.IsInGame()
 ```
 
@@ -136,7 +136,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsConnected = IEngine.IsConnected()
 ```
 
@@ -150,7 +150,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local szLevelName = IEngine.GetLevelName()
 ```
 
@@ -164,7 +164,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local szShortLevelName = IEngine.GetLevelNameShort()
 ```
 
@@ -178,7 +178,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local szMapGroupName = IEngine.GetMapGroupName()
 ```
 
@@ -188,11 +188,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| [INetChannelInfo\*](https://github.com/rollraw/baimless-lua-api/blob/master/doc/classes/inetchannelinfo.md) | pointer of net channel info |
+| [INetChannelInfo\*](../classes/inetchannelinfo.md) | pointer of net channel info |
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 ```
 
@@ -206,7 +206,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsPlayingDemo = IEngine.IsPlayingDemo()
 ```
 
@@ -220,7 +220,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsRecordingDemo = IEngine.IsRecordingDemo()
 ```
 
@@ -234,7 +234,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsPaused = IEngine.IsPaused()
 ```
 
@@ -248,7 +248,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsHLTV = IEngine.IsHLTV()
 ```
 
@@ -262,7 +262,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 IEngine.ExecuteClientCmd("say console log")
 ```
 
@@ -276,7 +276,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 IEngine.ExecuteClientCmd("sv_cheats 1")
 ```
 

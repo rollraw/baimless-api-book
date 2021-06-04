@@ -16,7 +16,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsReloading = pWeapon:IsReloading()
 ```
 
@@ -30,7 +30,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsWeapon = pWeapon:IsWeapon()
 ```
 
@@ -44,7 +44,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local nDefinitionIndex = pWeapon:GetItemDefinitionIndex()
 ```
 
@@ -58,7 +58,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local flSpread = pWeapon:GetSpread()
 ```
 
@@ -72,7 +72,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local flInaccuracy = pWeapon:GetInaccuracy()
 ```
 
@@ -86,7 +86,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local nMaxShift = pWeapon:GetMaxTickbaseShift()
 ```
 

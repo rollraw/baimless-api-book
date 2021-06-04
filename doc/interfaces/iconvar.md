@@ -14,7 +14,7 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| CConVar\* | console variable pointer |
+| [CConVar\*](../classes/cconvar.md) | console variable pointer |
 
 Code:
 

@@ -12,7 +12,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local szChannelName = pNetChannelInfo:GetName()
 print(szChannelName)
@@ -28,7 +28,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local szServerIP = pNetChannelInfo:GetAddress()
 print(szServerIP)
@@ -44,7 +44,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local bIsLoopback = pNetChannelInfo:IsLoopback()
 ```
@@ -59,7 +59,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local bIsPlayback = pNetChannelInfo:IsPlayback()
 ```
@@ -80,7 +80,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local flPing = pNetChannelInfo:GetLatency(0)
 print(tostring(flPing))
@@ -102,7 +102,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local flAvgPing = pNetChannelInfo:GetAvgLatency(0)
 print(tostring(flAvgPing))
@@ -124,7 +124,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local flAvgLoss = pNetChannelInfo:GetAvgLoss(0)
 print(tostring(flAvgLoss))
@@ -146,7 +146,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local flAvgChoke = pNetChannelInfo:GetAvgChoke(0)
 print(tostring(flAvgChoke))
@@ -168,7 +168,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local flAvgData = pNetChannelInfo:GetAvgData(0)
 print(tostring(flAvgData))
@@ -190,7 +190,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pNetChannelInfo = IEngine.GetNetChannelInfo()
 local flAvgPackets = pNetChannelInfo:GetAvgPackets(0)
 print(tostring(flAvgPackets))

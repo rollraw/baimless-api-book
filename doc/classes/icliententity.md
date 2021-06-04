@@ -6,13 +6,7 @@ description: >-
 
 # icliententity
 
-> Description: base class of all entities, inherited into [CBaseEntity](cbaseentity.md), [CBaseCombatWeapon](cbasecombatweapon.md) classes
-
 🚧 _API of this file is not finished yet and could be changed in any time_
-
-:construction: _API of this file is not finished yet and could be changed in any time_
-
-## Functions
 
 ## Functions
 
@@ -26,7 +20,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local hHandle = pEntity:GetRefEHandle()
 ```
 
@@ -36,11 +30,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| Vector | render origin |
+| [Vector](../datatypes/vector.md) | render origin |
 
 Code:
 
-```text
+```lua
 local vecRenderOrigin = pEntity:GetRenderOrigin()
 ```
 
@@ -50,11 +44,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| QAngle | render view point |
+| [QAngle](../datatypes/qangle.md) | render view point |
 
 Code:
 
-```text
+```lua
 local angRenderViewPoint = pEntity:GetRenderAngles()
 ```
 
@@ -68,7 +62,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsDormant = pEntity:IsDormant()
 ```
 
@@ -82,7 +76,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local nIndex = pEntity:GetIndex()
 ```
 
@@ -92,11 +86,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| Vector | absolute origin |
+| [Vector](../datatypes/vector.md) | absolute origin |
 
 Code:
 
-```text
+```lua
 local vecAbsOrigin = pEntity:GetAbsOrigin()
 ```
 
@@ -106,11 +100,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| QAngle | absolute view point |
+| [QAngle](../datatypes/qangle.md) | absolute view point |
 
 Code:
 
-```text
+```lua
 local angAbsViewPoint = pEntity:GetAbsAngles()
 ```
 
@@ -120,11 +114,11 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecAbsOrigin | Vector | absolute origin to set |
+| vecAbsOrigin | [Vector](../datatypes/vector.md) | absolute origin to set |
 
 Code:
 
-```text
+```lua
 pEntity:SetAbsOrigin(Vector.new(0.0, 0.0, 0.0))
 ```
 
@@ -134,11 +128,11 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| angAbsViewPoint | QAngle | absolute angles to set |
+| angAbsViewPoint | [QAngle](../datatypes/qangle.md) | absolute angles to set |
 
 Code:
 
-```text
+```lua
 pEntity:SetAbsAngles(QAngle.new(0.0, 0.0, 0.0))
 ```
 
@@ -164,11 +158,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| bool, int, float, [Vector](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/vector.md), [QAngle](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/qangle.md), CBaseHandle | value of given network variable in networked data table \(class\), type depends on function |
+| bool, int, float, [Vector](../datatypes/vector.md), [QAngle](../datatypes/qangle.md), CBaseHandle | value of given network variable in networked data table \(class\), type depends on function |
 
 Code:
 
-```text
+```lua
 local bSpotted = pEntity:GetPropertyBool("CBaseEntity->m_bSpotted")
 local iArmor = pLocal:GetPropertyInt("CCSPlayer->m_ArmorValue")
 local flAnimationTime = pLocal:GetPropertyFloat("CBaseEntity->m_flAnimTime")
@@ -184,11 +178,11 @@ Parameters:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | szNetwordVariable | string | class and network variable name to set |
-| value | bool, int, float, [Vector](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/vector.md), [QAngle](https://github.com/rollraw/baimless-lua-api/blob/master/doc/datatypes/qangle.md), CBaseHandle | value to set for given network variable in networked data table \(class\), type depends on function |
+| value | bool, int, float, [Vector](../datatypes/vector.md), [QAngle](../datatypes/qangle.md), CBaseHandle | value to set for given network variable in networked data table \(class\), type depends on function |
 
 Code:
 
-```text
+```lua
 pEntity:SetPropertyBool("CBaseEntity->m_bSpotted", true)
 pLocal:GetPropertyInt("CCSPlayer->m_ArmorValue", 100)
 pLocal:GetPropertyFloat("CBaseEntity->m_flAnimTime", 0.0)

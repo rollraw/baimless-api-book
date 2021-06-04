@@ -12,7 +12,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local szName = pEvent:GetName()
 print(szName)
 ```
@@ -27,7 +27,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bValue = pEvent:GetBool()
 ```
 
@@ -41,7 +41,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local iValue = pEvent:GetInt()
 ```
 
@@ -55,7 +55,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local ullValue = pEvent:GetUint64()
 ```
 
@@ -69,7 +69,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local flValue = pEvent:GetFloat()
 ```
 
@@ -83,7 +83,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local szValue = pEvent:GetString()
 ```
 
@@ -97,6 +97,10 @@ Parameters:
 
 Code:
 
+```lua
+pEvent:SetBool(true)
+```
+
 ### SetInt
 
 Parameters:
@@ -104,6 +108,10 @@ Parameters:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | iValue | int | value to set |
+
+```lua
+pEvent:SetInt(1)
+```
 
 Code:
 
@@ -117,6 +125,10 @@ Parameters:
 
 Code:
 
+```lua
+pEvent:SetUint64(1)
+```
+
 ### SetFloat
 
 Parameters:
@@ -127,6 +139,10 @@ Parameters:
 
 Code:
 
+```lua
+pEvent:SetFloat(1.0)
+```
+
 ### SetString
 
 Parameters:
@@ -136,4 +152,8 @@ Parameters:
 | szValue | string | value to set |
 
 Code:
+
+```lua
+pEvent:SetString("1")
+```
 

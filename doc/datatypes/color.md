@@ -32,9 +32,8 @@ Returns:
 
 Code:
 
-```text
+```lua
 local colPurple = Color.FromHSB(0.72, 1.0, 0.8, 1.0)
-end)
 ```
 
 ### Hue
@@ -47,7 +46,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local colRed = Color.new(255, 0, 0)
 print('hue of red color is '..tostring(colRed:Hue()))
 ```
@@ -62,7 +61,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local colGreen = Color.new(0, 255, 0)
 print('saturation of green color is '..tostring(colGreen:Saturation()))
 ```
@@ -77,7 +76,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local colBlue = Color.new(0, 0, 255)
 print('brightness of blue color is '..tostring(colBlue:Brightness()))
 ```

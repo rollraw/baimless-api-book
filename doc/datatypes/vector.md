@@ -20,7 +20,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecZero = Vector.new(0.0, 0.0, 0.0)
 local bIsZero = vecZero.IsZero()
 ```
@@ -35,7 +35,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecValid = Vector.new(1.0, 1.0, 1.0)
 local bIsValid = vecValid.IsValid()
 ```
@@ -50,7 +50,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecTest = Vector.new(100.0, 100.0, 100.0)
 local flLength = vecTest.Length()
 ```
@@ -65,7 +65,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecTest = Vector.new(100.0, 100.0, 100.0)
 local flSquaredLength = vecTest.LengthSqr()
 ```
@@ -80,7 +80,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecTest = Vector.new(100.0, 100.0, 100.0)
 local flLength2D = vecTest.Length2D()
 ```
@@ -95,7 +95,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecTest = Vector.new(100.0, 100.0, 100.0)
 local flSquaredLength2D = vecTest.Length2DSqr()
 ```
@@ -116,7 +116,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecStart = Vector.new(100.0, 100.0, 100.0)
 local vecEnd = Vector.new(200.0, 200.0, 200.0)
 local flDist = vecStart.DistTo(vecEnd)
@@ -138,7 +138,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecStart = Vector.new(100.0, 100.0, 100.0)
 local vecEnd = Vector.new(200.0, 200.0, 200.0)
 local flDistSqr = vecStart.DistToSqr(vecEnd)
@@ -160,7 +160,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecToDot = Vector.new(100.0, 100.0, 100.0)
 local vecDot = Vector.new(200.0, 200.0, 200.0)
 local vecDotProduct = vecToDot.CrossProduct(vecDot)
@@ -182,7 +182,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecToCross = Vector.new(100.0, 100.0, 100.0)
 local vecCross = Vector.new(200.0, 200.0, 200.0)
 local vecCrossProduct = vecToCross.CrossProduct(vecCross)
@@ -198,7 +198,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecTest = Vector.new(0.025, 0.025, 0.025)
 
 -- create a copy of vecTest, then NormalizeInPlace it and assign normalized vector to copied vector
@@ -215,7 +215,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecTest = Vector.new(0.025, 0.025, 0.025)
 local flLenght = vecTest.NormalizeInPlace()
 ```

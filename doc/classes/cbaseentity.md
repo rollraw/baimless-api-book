@@ -26,6 +26,8 @@ description: IClientEntity is base class
 
 ### GetLocalPlayer
 
+ℹ **Note:** `GetLocalPlayer()` is static class member function constructing color, it doesn't requires to call `.new()`
+
 Returns:
 
 | Type | Description |
@@ -34,7 +36,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local pLocal = CBaseEntity.GetLocalPlayer()
 ```
 
@@ -44,11 +46,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| CBaseCombatWeapon | active weapon entity |
+| [CBaseCombatWeapon](cbasecombatweapon.md) | active weapon entity |
 
 Code:
 
-```text
+```lua
 local pWeapon = pLocal:GetWeapon()
 ```
 
@@ -68,7 +70,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local iActivity = pLocal:GetSequenceActivity()
 ```
 
@@ -82,7 +84,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsAlive = pLocal:IsAlive()
 ```
 
@@ -96,7 +98,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsPlayer = pLocal:IsPlayer()
 ```
 
@@ -116,7 +118,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsEnemy = pLocal:IsEnemy(pEntity)
 ```
 
@@ -127,7 +129,7 @@ Parameters:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | pEntity | CBaseEntity | entity to check for visibility with current entity |
-| vecEnd | Vector | end position of visibility check |
+| vecEnd | [Vector](../datatypes/vector.md) | end position of visibility check |
 | bSmokeCheck | bool | additional check is line goes through smoke |
 
 Returns:
@@ -138,7 +140,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local bIsVisible = pLocal:IsVisible(pEntity, pEntity:BonePosition(8), true)
 ```
 
@@ -152,7 +154,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local flSimulationTime = pLocal:GetSimulationTime()
 ```
 
@@ -166,7 +168,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local flOldSimulationTime = pLocal:GetOldSimulationTime()
 ```
 
@@ -180,7 +182,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local flSpawnTime = pLocal:GetSpawnTime()
 ```
 
@@ -190,11 +192,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| [int]() | current type of entity movement |
+| [int](cbaseentity.md#emovetype) | current type of entity movement |
 
 Code:
 
-```text
+```lua
 local nMoveType = pLocal:GetMoveType()
 ```
 
@@ -204,11 +206,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| Vector | eye position origin in world space |
+| [Vector](../datatypes/vector.md) | eye position origin in world space |
 
 Code:
 
-```text
+```lua
 local vecEyePosition = pLocal:GetEyePosition()
 ```
 
@@ -224,11 +226,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| Vector | bone origin in world space |
+| [Vector](../datatypes/vector.md) | bone origin in world space |
 
 Code:
 
-```text
+```lua
 local vecHeadOrigin = pLocal:GetBonePosition(8)
 ```
 
@@ -244,11 +246,11 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| Vector | hitgroup origin in world space |
+| [Vector](../datatypes/vector.md) | hitgroup origin in world space |
 
 Code:
 
-```text
+```lua
 local vecHeadOrigin = pLocal:GetHitGroupPosition(1)
 ```
 

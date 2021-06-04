@@ -20,7 +20,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local angZero = QAngle.new(0.0, 0.0, 0.0)
 local bIsZero = angZero.IsZero()
 ```
@@ -35,7 +35,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local angUntrusted = QAngle.new(180.0, 720.0, 100.0)
 angUntrusted.Clamp() -- after this call angle will be QAngle(89.0, 180.0, 0.0)
 
@@ -53,7 +53,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local angUntrusted = QAngle.new(180.0, 720.0, 100.0)
 angUntrusted.Normalize() -- after this call angle will be QAngle(-90.0, 180.0, 0.0)
 

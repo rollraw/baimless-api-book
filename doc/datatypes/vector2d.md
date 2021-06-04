@@ -19,7 +19,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecZero = Vector2D.new(0.0, 0.0)
 local bIsZero = vecZero.IsZero()
 ```

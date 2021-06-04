@@ -23,7 +23,7 @@ Description: rounding corners render flags for all function with `roundingCorner
 
 ### ERectRenderFlags
 
-Description: render flags for `AddRect()`
+Description: render flags for [AddRect\(\)](draw.md#addrect)
 
 | Indentifiers |
 | :--- |
@@ -34,7 +34,7 @@ Description: render flags for `AddRect()`
 
 ### ECircleRenderFlags
 
-Description: render flags for `AddCircle()`
+Description: render flags for [AddCircle\(\)](draw.md#addcircle)
 
 | Indentifiers |
 | :--- |
@@ -44,7 +44,7 @@ Description: render flags for `AddCircle()`
 
 ### ECircle3DRenderFlags
 
-Description: render flags for `AddCircle3D()`
+Description: render flags for [AddCircle3D\(\)](draw.md#addcircle-3-d)
 
 | Indentifiers |
 | :--- |
@@ -55,7 +55,7 @@ Description: render flags for `AddCircle3D()`
 
 ### ETriangleRenderFlags
 
-Description: render flags for `AddTriangle()`
+Description: render flags for [AddTriangle\(\)](draw.md#addtriangle)
 
 | Indentifiers |
 | :--- |
@@ -65,7 +65,7 @@ Description: render flags for `AddTriangle()`
 
 ### EQuadRenderFlags
 
-Description: render flags for `AddQuad()`
+Description: render flags for [AddQuad\(\)](draw.md#addquad)
 
 | Indentifiers |
 | :--- |
@@ -75,7 +75,7 @@ Description: render flags for `AddQuad()`
 
 ### EPolygonRenderFlags
 
-Description: render flags for `AddPolygon()`
+Description: render flags for [AddPolygon\(\)](draw.md#addpolygon)
 
 | Indentifiers |
 | :--- |
@@ -85,7 +85,7 @@ Description: render flags for `AddPolygon()`
 
 ### ETextRenderFlags
 
-Description: render flags for `AddText()`
+Description: render flags for [AddText\(\)](draw.md#addtext)
 
 ⚠️ **Warning:** `DRAW_TEXT_DROPSHADOW` and `DRAW_TEXT_OUTLINE` flags cannot be used together
 
@@ -97,7 +97,7 @@ Description: render flags for `AddText()`
 
 ### ERasterizerFlags
 
-Description: rasterizer flags for `AddFont()`
+Description: rasterizer flags for [AddFont\(\)](draw.md#addfont)
 
 | Indentifiers |
 | :--- |
@@ -128,7 +128,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecLocalOrigin = pLocal.GetOrigin()
 local vecScreen = Draw.WorldToScreen(vecLocalOrigin)
 ```
@@ -146,7 +146,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 Draw.AddLine(Vector2D.new(100.0, 100.0), Vector2D.new(200.0, 100.0), Color.new(), 2.0)
 ```
 
@@ -159,15 +159,15 @@ Parameters:
 | vecMin | Vector2D | minimal position of rect |
 | vecMax | Vector2D | maximal position of rect |
 | colRect | Color | color of rect |
-| [_uFlags_]() | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| [_colOutline_]() | Color | color of outline |
-| [_flRounding_]() | float | corners rounding value |
-| [_roundingCorners_]() | [bitflag](https://en.wiktionary.org/wiki/bitflag) | rounding corners render flags |
-| [_flThickness_]() | float | thickness of non-filled rect / outline of filled rect |
+| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | Color | color of outline |
+| _flRounding_ | float | corners rounding value |
+| _roundingCorners_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | rounding corners render flags |
+| _flThickness_ | float | thickness of non-filled rect / outline of filled rect |
 
 Code:
 
-```text
+```lua
 local bit = require("bit")
 Draw.AddRect(Vector2D.new(100.0, 100.0), Vector2D.new(200.0, 200.0), Color.new(), bit.bor(ERectRenderFlags.DRAW_RECT_OUTLINE, ERectRenderFlags.DRAW_RECT_BORDER), Color.new(100, 0, 0, 255), 15.0)
 ```
@@ -187,7 +187,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 Draw.AddRectMultiColor(Vector2D.new(100.0, 100.0), Vector2D.new(200.0, 200.0), Color.new(0, 150, 200), Color.new(100, 150, 0), Color.new(0, 200, 0), Color.new(180, 0, 0))
 ```
 
@@ -201,13 +201,13 @@ Parameters:
 | flRadius | float | radius of circle |
 | colCircle | Color | color of circle |
 | nSegments | int | segments count for circle |
-| [_uFlags_]() | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| [_colOutline_]() | Color | color of outline |
-| [_flThickness_]() | float | thickness of non-filled circle / outline of filled circle |
+| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | Color | color of outline |
+| _flThickness_ | float | thickness of non-filled circle / outline of filled circle |
 
 Code:
 
-```text
+```lua
 local bit = require("bit")
 Draw.AddCircle(Vector2D.new(150.0, 150.0), 50.0, Color.new(), 12, bit.bor(ECircleRenderFlags.DRAW_CIRCLE_FILLED, ECircleRenderFlags.DRAW_CIRCLE_OUTLINE))
 ```
@@ -222,13 +222,13 @@ Parameters:
 | flRadius | float | radius of 3D circle |
 | colCircle | Color | color of 3D circle |
 | nSegments | int | segments count for 3D circle |
-| [_uFlags_]() | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| [_colOutline_]() | Color | color of outline |
-| [_flThickness_]() | float | thickness of non-filled 3D circle / outline of filled 3D circle |
+| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | Color | color of outline |
+| _flThickness_ | float | thickness of non-filled 3D circle / outline of filled 3D circle |
 
 Code:
 
-```text
+```lua
 Draw.AddCircle3D(pLocal.GetOrigin(), 50.0, Color.new(), 36, ECircle3DRenderFlags.DRAW_CIRCLE3D_DOTTED)
 ```
 
@@ -242,13 +242,13 @@ Parameters:
 | vecSecond | Vector2D | second position of triangle |
 | vecThird | Vector2D | third position of triangle |
 | colTriangle | Color | color of triangle |
-| [_uFlags_]() | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| [_colOutline_]() | Color | color of outline |
-| [_flThickness_]() | float | thickness of non-filled triangle / outline of filled triangle |
+| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | Color | color of outline |
+| _flThickness_ | float | thickness of non-filled triangle / outline of filled triangle |
 
 Code:
 
-```text
+```lua
 Draw.AddTriangle(Vector2D.new(150.0, 100.0), Vector2D.new(100.0, 200.0), Vector2D.new(200.0, 200.0), Color.new())
 ```
 
@@ -263,13 +263,13 @@ Parameters:
 | vecThird | Vector2D | third position of quad |
 | vecFourth | Vector2D | fourth position of quad |
 | colQuad | Color | color of quad |
-| [_uFlags_]() | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| [_colOutline_]() | Color | color of outline |
-| [_flThickness_]() | float | thickness of non-filled quad / outline of filled quad |
+| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | Color | color of outline |
+| _flThickness_ | float | thickness of non-filled quad / outline of filled quad |
 
 Code:
 
-```text
+```lua
 Draw.AddTriangle(Vector2D.new(150.0, 100.0), Vector2D.new(100.0, 200.0), Vector2D.new(200.0, 200.0), Color.new(), EQuadRenderFlags.DRAW_QUAD_OUTLINE)
 ```
 
@@ -287,7 +287,7 @@ Parameters:
 
 Code:
 
-```text
+```lua
 Draw.AddArc(Vector2D.new(150.0, 150.0), 50.0, Vector2D.new(-45.0, 45.0), Color.new(), 2.0)
 ```
 
@@ -297,16 +297,16 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecPoints | [table]() | polygon positions |
+| vecPoints | table | polygon positions |
 | colPolygon | Color | color of polygon |
-| [_uFlags_]() | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| [_colOutline_]() | Color | color of outline |
-| [_bClosed_]() | bool | if true after last point will be automatically added first point |
-| [_flThickness_]() | float | thickness of non-filled polygon / outline of filled polygon |
+| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | Color | color of outline |
+| _bClosed_ | bool | if true after last point will be automatically added first point |
+| _flThickness_ | float | thickness of non-filled polygon / outline of filled polygon |
 
 Code:
 
-```text
+```lua
 Draw.AddPolygon({ Vector2D.new(150.0, 100.0), Vector2D.new(140.0, 120.0), Vector2D.new(110.0, 140.0), Vector2D.new(140.0, 160.0), Vector2D.new(150.0, 180.0) }, Color.new(), EPolygonRenderFlags.DRAW_POLYGON_OUTLINE)
 ```
 
@@ -318,17 +318,17 @@ Parameters:
 | :--- | :--- | :--- |
 | vecPoints | string | path to font file \(.ttf / .otf\) |
 | flFontSize | float | size of font in pixels |
-| [_uFlags_]() | [bitflag]() | rasterizer flags |
+| _uFlags_ | [bitflag]() | rasterizer flags |
 
 Returns:
 
 | Type | Description |
 | :--- | :--- |
-| unsigned int | hash of added font |
+| uint32 | hash of added font |
 
 Code:
 
-```text
+```lua
 local uSeguiUI = Draw.AddFont("C:\\Windows\\Fonts\\seguiui.ttf", 20.0, ERasterizerFlags.BOLD)
 ```
 
@@ -338,11 +338,11 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| uFontHash | unsigned int | hash of font that will be removed |
+| uFontHash | uint32 | hash of font that will be removed |
 
 Code:
 
-```text
+```lua
 Client.RegisterCallback("Destroy", function()
 Draw.RemoveFont(uSeguiUI)
 end)
@@ -354,7 +354,7 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| uFontHash | unsigned int | hash of font for will be calculated size |
+| uFontHash | uint32 | hash of font for will be calculated size |
 | flFontSize | float | size of font in pixels |
 | szText | string | text for will be calculated size |
 
@@ -366,7 +366,7 @@ Returns:
 
 Code:
 
-```text
+```lua
 local vecTextSize = Draw.GetTextSize(uSeguiUI, 20.0, "Test")
 ```
 
@@ -376,18 +376,18 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| uFontHash | unsigned int | hash of font text will be rendered with |
+| uFontHash | uint32 | hash of font text will be rendered with |
 | flFontSize | float | size of font in pixels |
 | vecPosition | Vector2D | left-top corner position of text |
 | szText | string | text to render by given font hash |
 | colText | Color | color of text |
-| [_uFlags_]() | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| [_colOutline_]() | Color | color of outline |
-| [_flThickness_]() | float | thickness of outlined text |
+| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | Color | color of outline |
+| _flThickness_ | float | thickness of outlined text |
 
 Code:
 
-```text
+```lua
 Draw.AddText(uSeguiUI, 20.0, Vector2D.new(150.0, 150.0) - vecTextSize * 0.5, Color.new(), "Test", ETextRenderFlags.DRAW_TEXT_OUTLINE)
 ```
 
