@@ -158,7 +158,7 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| bool, int, float, [Vector](../datatypes/vector.md), [QAngle](../datatypes/qangle.md), CBaseHandle | value of given network variable in networked data table \(class\), type depends on function |
+| bool, int, float, [Vector](../datatypes/vector.md), [QAngle](../datatypes/qangle.md), CBaseHandle | value of given network variable in networked data table \(class\), type depends by function |
 
 Code:
 
@@ -166,7 +166,7 @@ Code:
 local bSpotted = pEntity:GetPropertyBool("CBaseEntity->m_bSpotted")
 local iArmor = pLocal:GetPropertyInt("CCSPlayer->m_ArmorValue")
 local flAnimationTime = pLocal:GetPropertyFloat("CBaseEntity->m_flAnimTime")
-local angRotation = pEntity:GetPropertyVector("CBaseEntity->m_angRotation")
+local angRotation = pEntity:GetPropertyQAngle("CBaseEntity->m_angRotation")
 local vecMins = pEntity:GetPropertyVector("CBaseEntity->m_vecMins")
 local hOwner = pEntity:GetPropertyHandle("CBaseEntity->m_hOwnerEntity")
 ```
@@ -178,7 +178,7 @@ Parameters:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | szNetwordVariable | string | class and network variable name to set |
-| value | bool, int, float, [Vector](../datatypes/vector.md), [QAngle](../datatypes/qangle.md), CBaseHandle | value to set for given network variable in networked data table \(class\), type depends on function |
+| value | bool, int, float, [Vector](../datatypes/vector.md), [QAngle](../datatypes/qangle.md), CBaseHandle | value to set for given network variable in networked data table \(class\), type depends by function |
 
 Code:
 
@@ -186,7 +186,7 @@ Code:
 pEntity:SetPropertyBool("CBaseEntity->m_bSpotted", true)
 pLocal:GetPropertyInt("CCSPlayer->m_ArmorValue", 100)
 pLocal:GetPropertyFloat("CBaseEntity->m_flAnimTime", 0.0)
-pEntity:GetPropertyVector("CBaseEntity->m_angRotation", QAngle.new())
+pEntity:GetPropertyQAngle("CBaseEntity->m_angRotation", QAngle.new())
 pEntity:GetPropertyVector("CBaseEntity->m_vecMins", Vector.new())
 pEntity:GetPropertyHandle("CBaseEntity->m_hOwnerEntity", 0)
 ```
