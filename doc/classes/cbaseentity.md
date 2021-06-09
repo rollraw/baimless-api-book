@@ -32,7 +32,7 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| CBaseEntity | local player entity |
+| CBaseEntity\* | local player entity |
 
 Code:
 
@@ -46,7 +46,7 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| [CBaseCombatWeapon](cbasecombatweapon.md) | active weapon entity |
+| [CBaseCombatWeapon\*](cbasecombatweapon.md) | active weapon entity |
 
 Code:
 
@@ -108,7 +108,7 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| pEntity | CBaseEntity | entity to check for enmity with current entity |
+| pEntity | CBaseEntity\* | entity to check for enmity with current entity |
 
 Returns:
 
@@ -128,7 +128,7 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| pEntity | CBaseEntity | entity to check for visibility with current entity |
+| pEntity | CBaseEntity\* | entity to check for visibility with current entity |
 | vecEnd | [Vector](../datatypes/vector.md) | end position of visibility check |
 | bSmokeCheck | bool | additional check is line goes through smoke |
 
