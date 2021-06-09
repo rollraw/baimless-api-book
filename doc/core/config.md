@@ -524,7 +524,7 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| any | automatic variable value, for a checkbox/toggle, returns boolean. for a sliderint/combo/multicombo, returns an integer. for a sliderfloat, returns a float. for a hotkey, returns true if the hotkey is active. for a color picker, returns [Color](../datatypes/color.md). for a vector \(also any type of supported e.g. `bool`, `int`, `float`\), returns table |
+| any | automatic variable value, for a checkbox/toggle, returns boolean. for a sliderint/combo/multicombo, returns an integer. for a sliderfloat, returns a float. for a hotkey, returns true if the hotkey is active. for a color picker, returns [Color](../datatypes/color.md). for a inputtext, returns a string. for a vector \(also any type of supported e.g. `bool`, `int`, `float`\), returns table |
 
 Code:
 
@@ -564,7 +564,7 @@ Parameters:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | [nVariableIndex](config.md#vars) | uint32 | index of variable to set value for |
-| value | any | automatic variable value, for a checkbox/toggle - bool. for a sliderint/combo/multicombo - integer. for a sliderfloat - float. for a hotkey - bool. for a color picker - [Color](../datatypes/color.md). for a vector \(also any type of supported e.g. `bool`, `int`, `float`\) - table of **ALL** values |
+| value | any | automatic variable value, for a checkbox/toggle - bool. for a sliderint/combo/multicombo - integer. for a sliderfloat - float. for a hotkey - bool. for a color picker - [Color](../datatypes/color.md). for a inputtext - string. for a vector \(also any type of supported e.g. `bool`, `int`, `float`\) - table of **ALL** values |
 
 Code:
 
