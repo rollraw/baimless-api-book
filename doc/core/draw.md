@@ -32,6 +32,16 @@ Description: render flags for [AddRect\(\)](draw.md#addrect)
 | DRAW\_RECT\_BORDER |
 | DRAW\_RECT\_FILLED |
 
+### EBox3DRenderFlags
+
+Description: render flags for [AddBox3D\(\)](draw.md#addbox-3-d)
+
+| Indentifiers |
+| :--- |
+| DRAW\_BOX3D\_NONE |
+| DRAW\_BOX3D\_OUTLINE |
+| DRAW\_BOX3D\_FILLED |
+
 ### ECircleRenderFlags
 
 Description: render flags for [AddCircle\(\)](draw.md#addcircle)
@@ -118,13 +128,13 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecWorldOrigin | Vector | position in world space |
+| vecWorldOrigin | [Vector](../datatypes/vector.md) | position in world space |
 
 Returns:
 
 | Type | Description |
 | :--- | :--- |
-| Vector2D | position of given world space in screen space |
+| [Vector2D](../datatypes/vector2d.md) | position of given world space in screen space |
 
 Code:
 
@@ -139,9 +149,9 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecStart | Vector2D | start position of line |
-| vecEnd | Vector2D | end position of line |
-| colLine | Color | color of line |
+| vecStart | [Vector2D](../datatypes/vector2d.md) | start position of line |
+| vecEnd | [Vector2D](../datatypes/vector2d.md) | end position of line |
+| colLine | [Color](../datatypes/color.md) | color of line |
 | _flThickness_ | float | thickness of line |
 
 Code:
@@ -156,13 +166,13 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecMin | Vector2D | minimal position of rect |
-| vecMax | Vector2D | maximal position of rect |
-| colRect | Color | color of rect |
-| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| _colOutline_ | Color | color of outline |
+| vecMin | [Vector2D](../datatypes/vector2d.md) | minimal position of rect |
+| vecMax | [Vector2D](../datatypes/vector2d.md) | maximal position of rect |
+| colRect | [Color](../datatypes/color.md) | color of rect |
+| \_\_[_uFlags_](draw.md#erectrenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | [Color](../datatypes/color.md) | color of outline |
 | _flRounding_ | float | corners rounding value |
-| _roundingCorners_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | rounding corners render flags |
+| \_\_[_roundingCorners_](draw.md#ecornerrenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | rounding corners render flags |
 | _flThickness_ | float | thickness of non-filled rect / outline of filled rect |
 
 Code:
@@ -178,17 +188,38 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecMin | Vector2D | minimal position of rect |
-| vecMax | Vector2D | maximal position of rect |
-| colUpperLeft | Color | color of upper-left corner of rect |
-| colUpperRight | Color | color of upper-right corner of rect |
-| colBottomRight | Color | color of bottom-right corner of rect |
-| colBottomLeft | Color | color of bottom-left corner of rect |
+| vecMin | [Vector2D](../datatypes/vector2d.md) | minimal position of rect |
+| vecMax | [Vector2D](../datatypes/vector2d.md) | maximal position of rect |
+| colUpperLeft | [Color](../datatypes/color.md) | color of upper-left corner of rect |
+| colUpperRight | [Color](../datatypes/color.md) | color of upper-right corner of rect |
+| colBottomRight | [Color](../datatypes/color.md) | color of bottom-right corner of rect |
+| colBottomLeft | [Color](../datatypes/color.md) | color of bottom-left corner of rect |
 
 Code:
 
 ```lua
 Draw.AddRectMultiColor(Vector2D.new(100.0, 100.0), Vector2D.new(200.0, 200.0), Color.new(0, 150, 200), Color.new(100, 150, 0), Color.new(0, 200, 0), Color.new(180, 0, 0))
+```
+
+### AddBox3D
+
+Parameters:
+
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| vecCenter | [Vector](../datatypes/vector.md) | center position of 3D box in world space |
+| vecAbsMin | [Vector](../datatypes/vector.md) | absolute minimal 3D box expansion |
+| vecAbsMax | [Vector](../datatypes/vector.md) | absolute maximal 3D box expansion |
+| angOrientation | [QAngle](../datatypes/qangle.md) | angle of 3D box rotation |
+| colBox | [Color](../datatypes/color.md) | color of 3D box |
+| \_\_[_uFlags_](draw.md#ebox-3-drenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | [Color](../datatypes/color.md) | color of outline |
+| _flThickness_ | float | thickness of non-filled 3D box / outline of filled 3D box |
+
+Code:
+
+```lua
+Draw.AddBox(Vector.new(150.0, 150.0, 150.0), Vector.new(-2.0, -2.0, -2.0), Vector.new(2.0, 2.0, 2.0), QAngle.new(), Color.new(), EBox3DRenderFlags.DRAW_BOX3D_FILLED)
 ```
 
 ### AddCircle
@@ -197,12 +228,12 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecCenter | Vector2D | center position of circle |
+| vecCenter | [Vector2D](../datatypes/vector2d.md) | center position of circle |
 | flRadius | float | radius of circle |
-| colCircle | Color | color of circle |
+| colCircle | [Color](../datatypes/color.md) | color of circle |
 | nSegments | int | segments count for circle |
-| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| _colOutline_ | Color | color of outline |
+| \_\_[_uFlags_](draw.md#ecirclerenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | [Color](../datatypes/color.md) | color of outline |
 | _flThickness_ | float | thickness of non-filled circle / outline of filled circle |
 
 Code:
@@ -218,12 +249,12 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecCenter | Vector | center position of 3D circle in world space |
+| vecCenter | [Vector](../datatypes/vector.md) | center position of 3D circle in world space |
 | flRadius | float | radius of 3D circle |
-| colCircle | Color | color of 3D circle |
+| colCircle | [Color](../datatypes/color.md) | color of 3D circle |
 | nSegments | int | segments count for 3D circle |
-| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| _colOutline_ | Color | color of outline |
+| \_\_[_uFlags_](draw.md#ecircle-3-drenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | [Color](../datatypes/color.md) | color of outline |
 | _flThickness_ | float | thickness of non-filled 3D circle / outline of filled 3D circle |
 
 Code:
@@ -238,12 +269,12 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecFirst | Vector2D | first position of triangle |
-| vecSecond | Vector2D | second position of triangle |
-| vecThird | Vector2D | third position of triangle |
-| colTriangle | Color | color of triangle |
-| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| _colOutline_ | Color | color of outline |
+| vecFirst | [Vector2D](../datatypes/vector2d.md) | first position of triangle |
+| vecSecond | [Vector2D](../datatypes/vector2d.md) | second position of triangle |
+| vecThird | [Vector2D](../datatypes/vector2d.md) | third position of triangle |
+| colTriangle | [Color](../datatypes/color.md) | color of triangle |
+| \_\_[_uFlags_](draw.md#etrianglerenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | [Color](../datatypes/color.md) | color of outline |
 | _flThickness_ | float | thickness of non-filled triangle / outline of filled triangle |
 
 Code:
@@ -258,13 +289,13 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecFirst | Vector2D | first position of quad |
-| vecSecond | Vector2D | second position of quad |
-| vecThird | Vector2D | third position of quad |
-| vecFourth | Vector2D | fourth position of quad |
-| colQuad | Color | color of quad |
-| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| _colOutline_ | Color | color of outline |
+| vecFirst | [Vector2D](../datatypes/vector2d.md) | first position of quad |
+| vecSecond | [Vector2D](../datatypes/vector2d.md) | second position of quad |
+| vecThird | [Vector2D](../datatypes/vector2d.md) | third position of quad |
+| vecFourth | [Vector2D](../datatypes/vector2d.md) | fourth position of quad |
+| colQuad | [Color](../datatypes/color.md) | color of quad |
+| \_\_[_uFlags_](draw.md#equadrenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | [Color](../datatypes/color.md) | color of outline |
 | _flThickness_ | float | thickness of non-filled quad / outline of filled quad |
 
 Code:
@@ -279,10 +310,10 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| vecCenter | Vector2D | center position of arc |
+| vecCenter | [Vector2D](../datatypes/vector2d.md) | center position of arc |
 | flRadius | float | radius of arc |
-| vecAngleRange | Vector2D | minimal and maximal angles of arc |
-| colArc | Color | color of arc |
+| vecAngleRange | [Vector2D](../datatypes/vector2d.md) | minimal and maximal angles of arc |
+| colArc | [Color](../datatypes/color.md) | color of arc |
 | flThickness | float | thickness of arc |
 
 Code:
@@ -298,9 +329,9 @@ Parameters:
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | vecPoints | table | polygon positions |
-| colPolygon | Color | color of polygon |
-| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| _colOutline_ | Color | color of outline |
+| colPolygon | [Color](../datatypes/color.md) | color of polygon |
+| \_\_[_uFlags_](draw.md#epolygonrenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | [Color](../datatypes/color.md) | color of outline |
 | _bClosed_ | bool | if true after last point will be automatically added first point |
 | _flThickness_ | float | thickness of non-filled polygon / outline of filled polygon |
 
@@ -318,7 +349,7 @@ Parameters:
 | :--- | :--- | :--- |
 | vecPoints | string | path to font file \(.ttf / .otf\) |
 | flFontSize | float | size of font in pixels |
-| _uFlags_ | [bitflag]() | rasterizer flags |
+| \_\_[_uFlags_](draw.md#erasterizerflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | rasterizer flags |
 
 Returns:
 
@@ -362,7 +393,7 @@ Returns:
 
 | Type | Description |
 | :--- | :--- |
-| Vector2D | size for given font with given text |
+| [Vector2D](../datatypes/vector2d.md) | size for given font with given text |
 
 Code:
 
@@ -378,11 +409,11 @@ Parameters:
 | :--- | :--- | :--- |
 | uFontHash | uint32 | hash of font text will be rendered with |
 | flFontSize | float | size of font in pixels |
-| vecPosition | Vector2D | left-top corner position of text |
+| vecPosition | [Vector2D](../datatypes/vector2d.md) | left-top corner position of text |
 | szText | string | text to render by given font hash |
-| colText | Color | color of text |
-| _uFlags_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
-| _colOutline_ | Color | color of outline |
+| colText | [Color](../datatypes/color.md) | color of text |
+| \_\_[_uFlags_](draw.md#etextrenderflags)\_\_ | [bitflag](https://en.wiktionary.org/wiki/bitflag) | render flags |
+| _colOutline_ | [Color](../datatypes/color.md) | color of outline |
 | _flThickness_ | float | thickness of outlined text |
 
 Code:
