@@ -26,8 +26,8 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | Indentifiers |
 | :--- |
 | bRage                                  |
+| bAutoPeekTeleport                      |
 | bRageAutoFire                          |
-| bRageScanFakeDuckFull                  |
 | iRageAutoZeusDelay                     |
 | iRageHeadScale                         |
 | iRageBodyScale                         |
@@ -35,6 +35,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | keyRageHideShots                       |
 | keyRageForceOverrideResolver           |
 | keyRageForceBackShoot                  |
+| bRageForceFullScanInAir                |
 | nRageLogicLocal                        |
 | iRageLogicLocalTrigger                 |
 | iRageLogicLocalLowHealth               |
@@ -44,12 +45,15 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | bRageFakeLag                           |
 | iRageFakeLagType                       |
 | iRageFakeLagTicks                      |
+| iRageLegBreakerTicks                   |
+| iStaticLegsTicks                       |
 | iRageFakeLagJitter                     |
 | nRageFakeLagTriggers                   |
 | iRageFakeLagTriggersTicks              |
 | bRageBreakLC                           |
 | bRageHoldFireAnimation                 |
 | bRageStaticLegsMove                    |
+| bRageJitterLegsMove                    |
 | bRageStaticLegsAir                     |
 | iRageAntiAimForceLowDeltaMode          |
 | nRageAntiAimForceLowDeltaConditions    |
@@ -57,14 +61,20 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | keyRageSlowWalk                        |
 | iRageSlowWalkMode                      |
 | keyRageFakeDuck                        |
+| bRageScanFakeDuckFull                  |
 | keyRageAntiAimManualLeft               |
 | keyRageAntiAimManualRight              |
 | keyRageAntiAimManualBack               |
 | keyRageSafeAntiAim                     |
 | iRageSafeAntiAimYaw                    |
 | iRageSafeAntiAimYawInverted            |
+| bRageSafeAntiAimForceLowDelta          |
+| bRageSafeAntiAimAtTarget               |
+| bRageSafeAntiAimHideReal               |
 | vecRageAntiAim                         |
 | vecRageAntiAimManual                   |
+| vecRageAntiAimTimerSwitch              |
+| vecRageAntiAimTimerJitter              |
 | vecRageAntiAimYaw                      |
 | vecRageAntiAimYawInverted              |
 | vecRageAntiAimYawRandomMin             |
@@ -72,6 +82,8 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | vecRageAntiAimJitter                   |
 | vecRageAntiAimJitterInverted           |
 | vecRageAntiAimFakeYaw                  |
+| vecRageAntiAimSideToSide               |
+| vecRageAntiAimSideToSideOverlap        |
 | vecRageAntiAimFreestand                |
 | vecRageAntiAimAtTarget                 |
 | vecRageAntiAimHideReal                 |
@@ -87,16 +99,20 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | vecRageSilent                          |
 | vecRageAutoStop                        |
 | vecRageAutoStopEarly                   |
+| vecRageAutoStopForcePrecision          |
 | vecRageAutoStopEarlyTime               |
 | vecRageAutoStopTriggers                |
 | vecRageAutoScope                       |
 | vecRageDoubleTapWaitRecharge           |
 | vecRageDoubleTapRechargeDelay          |
-| vecRageDoubleTapAdaptiveDamage         |
+| vecRageRechargeTicks                   |
+| vecRageShiftTicks                      |
+| vecRageDoubleTapAdaptiveSelection      |
 | vecRageDoubleTapHitChance              |
 | vecRageDoubleTapFastTeleport           |
 | vecRageForceDamage                     |
 | vecRageForceDamageHealthLess           |
+| vecRageShiftMinusChoke                 |
 | vecRagePreferBody                      |
 | vecRagePreferSafePoints                |
 | vecRageHitChanceMode                   |
@@ -139,6 +155,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | vecLegitSilentBullets                  |
 | vecLegitSilentFOV                      |
 | vecLegitHitbox                         |
+| vecLegitDistanceBasedFOV               |
 | vecLegitFOV                            |
 | vecLegitSmooth                         |
 | bTrigger                               |
@@ -173,7 +190,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | colEspMainSkeletonAllies               |
 | bEspMainPlayerOutOfScreen              |
 | flEspMainPlayerOutOfScreenRadius       |
-| flEspMainPlayerOutOfScreenWidth        |
+| flEspMainPlayerOutOfScreenSize         |
 | flEspMainPlayerOutOfScreenThickness    |
 | colEspMainPlayerOutOfScreenEnemies     |
 | colEspMainPlayerOutOfScreenAllies      |
@@ -198,6 +215,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | iEspMainPlayerNameChildSide            |
 | bEspMainPlayerFlash                    |
 | iEspMainPlayerFlashSide                |
+| iEspMainPlayerFlagsMode                |
 | nEspMainPlayerFlags                    |
 | iEspMainPlayerHelmetSide               |
 | iEspMainPlayerHelmetChildSide          |
@@ -209,7 +227,8 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | iEspMainPlayerZoomChildSide            |
 | iEspMainPlayerFakeDuckSide             |
 | iEspMainPlayerFakeDuckChildSide        |
-| iEspMainPlayerWeapons                  |
+| iEspMainPlayerWeaponsMode              |
+| nEspMainPlayerWeaponsFlags             |
 | iEspMainPlayerWeaponsSide              |
 | iEspMainPlayerWeaponsChildSide         |
 | iEspMainPlayerGrenadesSide             |
@@ -262,6 +281,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | bEspChamsLocal                         |
 | bEspChamsViewModel                     |
 | iEspChamsPlayers                       |
+| iEspChamsPlayersCustom                 |
 | bEspChamsPlayersXQZ                    |
 | bEspChamsPlayersWireframe              |
 | flEspChamsPlayersPearlescent           |
@@ -275,6 +295,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | colEspChamsAlliesAdditional            |
 | colEspChamsAlliesAdditionalWall        |
 | iEspChamsPreserveHit                   |
+| iEspChamsPreserveHitCustom             |
 | bEspChamsPreserveHitXQZ                |
 | flEspChamsPreserveHitTime              |
 | colEspChamsPreserveHit                 |
@@ -283,6 +304,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | colEspChamsPreserveHitAdditionalWall   |
 | iEspChamsBackTrack                     |
 | iEspChamsBackTrackMode                 |
+| iEspChamsBackTrackCustom               |
 | bEspChamsBackTrackXQZ                  |
 | bEspChamsBackTrackWireframe            |
 | colEspChamsBackTrackFirst              |
@@ -290,10 +312,12 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | colEspChamsBackTrackLast               |
 | colEspChamsBackTrackLastAdditional     |
 | iEspChamsLocal                         |
+| iEspChamsLocalCustom                   |
 | bEspChamsLocalXQZ                      |
 | bEspChamsLocalWireframe                |
 | flEspChamsLocalPearlescent             |
 | iEspChamsLocalDesync                   |
+| iEspChamsLocalDesyncCustom             |
 | colEspChamsLocal                       |
 | colEspChamsLocalWall                   |
 | colEspChamsLocalAdditional             |
@@ -302,6 +326,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | colEspChamsLocalDesyncAdditional       |
 | bEspChamsViewModelNoDraw               |
 | iEspChamsViewModel                     |
+| iEspChamsViewModelCustom               |
 | bEspChamsViewModelXQZ                  |
 | bEspChamsViewModelWireframe            |
 | flEspChamsViewModelPearlescent         |
@@ -309,6 +334,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | colEspChamsViewModelWall               |
 | colEspChamsViewModelAdditional         |
 | colEspChamsViewModelAdditionalWall     |
+| vecEspChamsCustomMaterials             |
 | bWorld                                 |
 | iWorldSkyBox                           |
 | szWorldSkyBoxCustom                    |
@@ -339,12 +365,17 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | iWorldWeather                          |
 | flWorldWeatherParticleLenght           |
 | iWorldWeatherWindPower                 |
+| flWorldNightFactor                     |
 | bWorldOverrideColor                    |
 | colWorldOverride                       |
 | bWorldPropertiesOverrideColor          |
 | colWorldPropertiesOverride             |
 | bWorldSkyBoxOverrideColor              |
 | colWorldSkyBoxOverride                 |
+| bWorldMolotovOverrideColor             |
+| colWorldMolotovOverride                |
+| bWorldSmokeOverrideColor               |
+| colWorldSmokeOverride                  |
 | bWorldBulletTracer                     |
 | nWorldBulletTracerShowTrace            |
 | colWorldBulletTracer                   |
@@ -372,6 +403,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | colScreenKnifeZeusRange                |
 | bScreenPreserveKillFeed                |
 | bScreenPreserveKillFeedOnlyHS          |
+| bScreenForceCompass                    |
 | flScreenAspectRatio                    |
 | flScreenCameraFOV                      |
 | bScreenCameraFOVIgnoreScope            |
@@ -382,6 +414,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | bScreenRadarInGame                     |
 | bScreenRadarEnemies                    |
 | bScreenRadarAllies                     |
+| bScreenRadarWeapons                    |
 | bScreenRadarBomb                       |
 | bScreenRadarSpottedCheck               |
 | bScreenRadarPlayerName                 |
@@ -480,6 +513,7 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | flMiscGrenadeHelperFOV                 |
 | flMiscGrenadeHelperSmooth              |
 | bMiscPingSpike                         |
+| keyMiscPingSpike                       |
 | flMiscLatencyFactor                    |
 | bMiscRevealRanks                       |
 | bMiscRevealOverwatch                   |
@@ -519,8 +553,6 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | iProfileWingmanWins                    |
 | iProfileDangerZoneRank                 |
 | iProfileDangerZoneWins                 |
-| bScriptsAllowHTTP                      |
-
 ## Functions
 
 ### Get
