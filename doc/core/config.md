@@ -26,7 +26,6 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | Indentifiers |
 | :--- |
 | bRage                                  |
-| bAutoPeekTeleport                      |
 | bRageAutoFire                          |
 | iRageAutoZeusDelay                     |
 | iRageHeadScale                         |
@@ -46,7 +45,6 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | iRageFakeLagType                       |
 | iRageFakeLagTicks                      |
 | iRageLegBreakerTicks                   |
-| iStaticLegsTicks                       |
 | iRageFakeLagJitter                     |
 | nRageFakeLagTriggers                   |
 | iRageFakeLagTriggersTicks              |
@@ -106,7 +104,6 @@ Description: variables indexes to be used in [Set\(\)](config.md#set)/[Get\(\)](
 | vecRageDoubleTapWaitRecharge           |
 | vecRageDoubleTapRechargeDelay          |
 | vecRageRechargeTicks                   |
-| vecRageShiftTicks                      |
 | vecRageDoubleTapAdaptiveSelection      |
 | vecRageDoubleTapHitChance              |
 | vecRageDoubleTapFastTeleport           |
