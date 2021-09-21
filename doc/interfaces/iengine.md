@@ -258,25 +258,10 @@ Parameters:
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| szCmdString | string | command to execute \(within flag checks\) |
+| szCmdString | string | command to execute \(without flag checks\) |
 
 Code:
 
 ```lua
 IEngine.ExecuteClientCmd("say console log")
 ```
-
-### ClientCmdUnrestricted
-
-Parameters:
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| szCmdString | string | command to execute \(without flag checks\) |
-
-Code:
-
-```lua
-IEngine.ExecuteClientCmd("sv_cheats 1")
-```
-
